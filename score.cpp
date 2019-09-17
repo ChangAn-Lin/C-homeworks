@@ -69,10 +69,10 @@ SS* readDataFromFile(int *N)
 	{
 
 		//读入文件数据到内存	
-		fscanf(fp, "%s%s%f%f%f\n", (stu[index].number), (stu[index].name), &stu[index].dailyScore, &stu[index].finalScore，&stu[index].ex);
+		fscanf(fp, "%s%s%f%f%d\n", (stu[index].number), (stu[index].name), &stu[index].dailyScore, &stu[index].finalScore,&stu[index].exscore);
 
 		//输出排序后的学生信息
-		printf("* 学号：%s	姓名:%s		平时成绩：%4.2f分		期末成绩:%4.2f分\n", (stu[index].number), (stu[index].name), stu[index].dailyScore, stu[index].finalScore);
+		printf("* 学号：%s	姓名:%s		平时成绩：%4.2f分		期末成绩:%4.2f分	实验成绩：%d分\n", (stu[index].number), (stu[index].name), stu[index].dailyScore, stu[index].finalScore,stu[index].exscore);
 
 		index++;
 	}
@@ -94,7 +94,7 @@ void calcuScore(SS stu[], int N)
 	for (int i = 0; i < N; i++)
 	{
 
-		stu[i].generalScore = 0.2*stu[i].dailyScore + 0.8*stu[i].finalScore;
+		stu[i].generalScore = 0.2*stu[i].dailyScore + 0.6*stu[i].finalScore+0.2*stu[i].exscore;
 		printf("* 学号：%s	姓名:%s		总成绩:%4.2f分\n", (stu[i].number), (stu[i].name), stu[i].generalScore);
 
 	}

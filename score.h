@@ -21,7 +21,7 @@ typedef struct student
 	float dailyScore;   //平时成绩
 	float finalScore;   //期末成绩
 	double generalScore; //总评成绩
-
+	int exscore;		//实验
 }SS;
 
 
