@@ -70,7 +70,7 @@ int date()							//输入日期求该日为这一年第几天，第几周
 	getchar();
 	return 0;
 }
-int main()
+int main()							//主函数。。
 {
     numsolve();
 	trainglespace();
