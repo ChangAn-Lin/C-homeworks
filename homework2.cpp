@@ -2,36 +2,36 @@
 #include<stdio.h>
 #include<iostream>
 using namespace std;
-int numsolve()
+int numsolve()							//æ±‚ä¸€å…ƒäºŒæ¬¡æ–¹ç¨‹çš„è§£
 {
 	float a = 0, b = 0, c = 0, x1 = 0, x2 = 0,s,i;
-	cout << "ÇëÊäÈë´ýÇó·½³ÌÏµÊý£º";
+	cout << "è¯·è¾“å…¥å¾…æ±‚æ–¹ç¨‹ç³»æ•°ï¼š";
 	cin >> a >> b >> c;
 	s = b * b - 4 * a * c;
 	i = sqrt(s);
 	if (s < 0)
 	{
-		cout << "ÎÞ½â"<<endl;
+		cout << "æ— è§£"<<endl;
 
 
 	}
 	else if (s = 0)
 	{
 		x1 = ( - b) / (2 * a);
-		cout << "Á½¸öÏàµÈµÄ¸ù" << x1;
+		cout << "ä¸¤ä¸ªç›¸ç­‰çš„æ ¹" << x1;
 	}
 	else
 	{
 		x1 = (i - b) / (2 * a);
 		x2 = (-i - b) / (2 * a);
-		cout << "Á½¸ö¸ù" << x1 <<" "<< x2<<endl;
+		cout << "ä¸¤ä¸ªæ ¹" << x1 <<" "<< x2<<endl;
 	}
 	return 0;
 }
-int trainglespace()
+int trainglespace()						//æ±‚ä¸‰è§’å½¢é¢ç§¯
 {
 	float a, b, c, d,s;
-	cout << "ÇëÊäÈëËùÇóÈý½ÇÐÎµÄÈý±ß³¤¶È" << endl;
+	cout << "è¯·è¾“å…¥æ‰€æ±‚ä¸‰è§’å½¢çš„ä¸‰è¾¹é•¿åº¦" << endl;
 	cin >> a >> b >> c;
 	d = (a + b + c) / 2;
 	s = sqrt(d*(d - a)*(d - b)*(d - c));
@@ -39,12 +39,12 @@ int trainglespace()
 	return 0;
 }
 
-int date()
+int date()							//è¾“å…¥æ—¥æœŸæ±‚è¯¥æ—¥ä¸ºè¿™ä¸€å¹´ç¬¬å‡ å¤©ï¼Œç¬¬å‡ å‘¨
 {
 	int year, month, day, days = 0,j=0;
 	int flag;
 	int a[7] = { 1,3,5,7,8,10,12 };
-	cout << "ÇëÊäÈë°´Ë³ÐòÊäÈëÒª²éÑ¯µÄÄê·Ý¡¢ÔÂ·ÝºÍÈÕÆÚ£º" << endl;
+	cout << "è¯·è¾“å…¥æŒ‰é¡ºåºè¾“å…¥è¦æŸ¥è¯¢çš„å¹´ä»½ã€æœˆä»½å’Œæ—¥æœŸï¼š" << endl;
 	cin >>year >> month >> day;
 	for (int i = 1; i <month; i++)
 	{
@@ -65,8 +65,8 @@ int date()
 	}
 	
 	days = days + day;
-	cout << "ÕâÊÇ½ñÄêµÚ" << days << "Ìì"<<endl;
-	cout << "ÕâÊÇ½ñÄêµÚ" << days/7 +1<< "ÖÜ" << endl;
+	cout << "è¿™æ˜¯ä»Šå¹´ç¬¬" << days << "å¤©"<<endl;
+	cout << "è¿™æ˜¯ä»Šå¹´ç¬¬" << days/7 +1<< "å‘¨" << endl;
 	getchar();
 	return 0;
 }
