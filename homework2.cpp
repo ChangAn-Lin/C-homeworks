@@ -11,20 +11,20 @@ int numsolve()							//求一元二次方程的解
 	i = sqrt(s);
 	if (s < 0)
 	{
-		cout << "无解"<<endl;
+		cout << "此方程无解"<<endl;
 
 
 	}
 	else if (s = 0)
 	{
 		x1 = ( - b) / (2 * a);
-		cout << "两个相等的根" << x1;
+		cout << "方程有两个相等的根" << x1;
 	}
 	else
 	{
 		x1 = (i - b) / (2 * a);
 		x2 = (-i - b) / (2 * a);
-		cout << "两个根" << x1 <<" "<< x2<<endl;
+		cout << "此方程有两个根" << x1 <<" "<< x2<<endl;
 	}
 	return 0;
 }
@@ -35,7 +35,7 @@ int trainglespace()						//求三角形面积
 	cin >> a >> b >> c;
 	d = (a + b + c) / 2;
 	s = sqrt(d*(d - a)*(d - b)*(d - c));
-	cout << s<<endl;
+	cout <<"三角形面积为："<< s<<endl;
 	return 0;
 }
 
